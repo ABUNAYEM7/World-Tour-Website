@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --primary-color:rgb(19, 19, 24);
+    --secondary-color:rgb(90, 90, 93);
+    --dark2-color:rgb(66, 66, 71);
+    --highlighter:rgb(255, 84, 0);
+}
+body{
+    font-family: "Mulish", sans-serif;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+main{
+    max-width: 1180px;
+    margin: 0 auto;
+}
+/* shared style */
+.display-flex{
+    display: flex;
+}
+.nav-container{
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.brand-container,
+.nav-list{
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    list-style: none;
+}
+.nav-list a{
+    text-decoration: none;
+}
+.brand-title{
+    visibility: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.brand-title span{
+    color:var(--highlighter);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.nav-item{
+    color: var(--dark2-color);
+    font-size: 1.15rem;
+}
+.nav-bars{
+    display: none;
+}
+/* banner style */
+.banner-container{
+    max-width: 1180px;
+    height: 500px;
+    margin: 3.5rem auto;
+    background: linear-gradient(180.00deg, rgba(19, 19, 24, 0.8),rgba(19, 19, 24, 0) 100%), url(../Images/banner.png.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    
+}
+.banner-info{
+    max-width: 60%;
+    text-align: center;
+    padding: 1rem;
+}
+.banner-info h3{
+    color: white;
+    font-size: 3rem;
+    font-weight: 800;
+}
+.banner-info p{
+    color: white;
+    font-weight: 500;
+}
+.banner-form{
+    max-width: 80%;
+    background-color: rgba(255, 255, 255, 0.199);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    align-items: center;
+    gap: 1rem;
+}
+.banner-form select{
+    padding: 1rem 1.7rem;
+    color: var(--dark2-color);
+    border: none;
+    border-radius: 0.5rem;
+}
+.banner-inputs{
+    padding: 1rem 1.7rem;
+    color: var(--dark2-color);
+    border: none;
+    border-radius: 0.5rem;
+}
+.primary-btn{
+    background-color: var(--highlighter);
+    color: white;
+    font-weight: 500;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+/* popular-section-style */
+.popular-section{
+    align-items: center;
+    justify-content: space-between;
+}
+.popular-left-container{
+    max-width: 50%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.6rem;
+}
+.popular-left-container h3{
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+.popular-left-container p, li{
+    color: rgba(19, 19, 24, 0.7);;
+    font-size: 0.9rem;
+}
+.popular-right-container{
+    max-width: 45%;
+}
+.popular-right-container img{
+    max-width: 100%;
+}
+/* destination-section-style */
+.destination-info-container,
+.card-section-info,
+.discount-section-info{
+    max-width: 50%;
+    text-align: center;
+    margin: 1rem auto;
+}
+.destination-info-container,
+.discount-section-info h3{
+    color: var(--primary-color);
+    font-size: 2rem;
+    font-weight: 800;
+    margin: 1rem;
+}
+.destination-image-content{
+    position: relative;
+}
+.destination-image-content p{
+    position: absolute;
+    top: 50%;
+    left: 35%; 
+    color: white;
+    font-size: 1.7rem;
+    font-weight: 800;
+}
+.overlay{
+    background-color:  rgba(19, 19, 24, 0.2)red;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.destination-image-row1{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 1rem;
+}
+.destination-image-row2{
+    display: grid;
+    grid-template-columns: 0.65fr 0.85fr 0.5fr;
+    gap: 1rem;
+}
+.destination-image-row3{
+    display: grid;
+    grid-template-columns: 0.4fr 0.6fr;
+    gap: 1rem;
+}
+.destination-image-row1,
+.destination-image-row2,
+.destination-image-row3 ,img{
+    max-width: 100%;
+}
+/* card-section-style */
+.card-section-info,
+.discount-section-info{
+    margin: 2rem auto;
+}
+.card-section-info,
+.perfect-left-container h3{
+    color: var(--primary-color);
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+.card-section-info,
+.discount-section-info, p{
+    color: rgba(19, 19, 24, 0.7);
+    font-size: 0.9rem;
+    margin-top: 1rem;
+}
+.card{
+    max-width: 570px;
+    height: 270px;
+    padding: 1rem 2rem;
+    background-color: rgba(251, 181, 99, 0.05);
+    border-radius: 0.9rem;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.card-image-container{
+    width: 100px;
+    height: 100px;
+}
+.card-image-container{
+    max-width: 100%;
+    max-height: 100%;
+}
+.card h3,
+.tour-satorini-info-container{
+    color: var(--primary-color);
+    font-size: 1.6rem;
+    font-weight: 800;
+}
+.card,
+.tour-satorini-info-container,
+.perfect-left-container p{
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+.card2{
+    background-color: rgba(41, 206, 246, 0.05);;
+}
+.card3{
+    background-color: rgba(233, 68, 68, 0.05);;
+}
+.card-row1{
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin: 1rem 0;
+}
+.card-row2{
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+/* tour section style */
+.tour-satorini-container{
+    max-width: 100%;
+    height: 500px;
+    position: relative;
+    background-image: url(../Images/Group\ 39.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 0.9rem;
+}
+.tour-satorini-content{
+    max-width: 580px;
+    height: 380px;
+    background-color: rgba(255, 255, 255, 0.8);
+    filter: blur(5);
+    border-radius: 0.9rem;
+    position: absolute;
+    top: 14%;
+    left: 47%;
+    padding: 1rem 2rem;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.tour-subtitle-container {
+    align-items: center;
+    justify-content: space-around;
+}
+.tour-subtitle-container p{
+    color: var(--secondary-color);
+    font-size: 0.9rem;
+}
+
+.tour-subtitle-container i{
+    color: var(--highlighter);
+}
+.tour-satorini-info-container,
+.tour-satorini-btn-container{
+    padding: 1rem 2rem;
+}
+.tour-link{
+    text-decoration: none;
+}
+.tour-link p{
+    color: var(--highlighter);
+    font-size: 1.2rem;
+    font-weight: 800;
+}
+.container2{
+    background-image: url(../Images/Group\ 40.png);
+    margin: 2rem 0;
+}
+.content2{
+    left: 5%;
+}
+.tour-satorini-button-container{
+    text-align: center;
+}
+.tour-button{
+    background-color: var(--highlighter);
+    margin:1rem;
+    color: white;
+    font-weight: 500;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+/* perfect-section-style */
+.perfect-section{
+    margin: 2rem auto;
+    justify-content: space-between;
+}
+.perfect-left-container{
+    max-width: 40%;
+    padding: 1rem 2rem;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+.perfect-left-container li{
+    color:var(--primary-color);
+    font-size: 0.9rem;
+    padding-left: 1rem;
+}
+.perfect-right-container{
+    width: 50%;
+    border-radius: 0.9rem;
+    position: relative;
+}
+.perfect-right-container img{
+    max-width: 100%;
+    height: 100%;
+    border-radius: 0.9rem;
+}
+.perfect-right-container h3{
+    width: 60%;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+/* newsletter-section-style */
+.Newsletter-section{
+    margin: 2rem auto;
+    align-items: center;
+    justify-content: space-between;
+}
+.Newsletter-left-container{
+    max-width: 33%;
+    height: 420px;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 2rem;
+    padding: 0.8rem 2rem;
+    border: 1px solid var(--highlighter);
+    border-radius: 0.9rem;
+}
+.Newsletter-left-form{
+    flex-direction: column;
+    gap: 2rem;
+}
+.Newsletter-left-info h3{
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-weight: 800;
+}
+.Newsletter-left-form input{
+    background-color: rgba(19, 19, 24, 0.05);
+    padding: 0.7rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+}
+.Newsletter-left-form button{
+    background-color: var(--highlighter);
+    color: white;
+    text-align: center;
+    padding: 0.8rem 2rem;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+.Newsletter-right-container{
+    max-width: 60%;
+    position: relative;
+}
+.Newsletter-right-container img{
+    max-width: 100%;
+    position: relative;
+}
+.travel-container{
+    background-color: var(--highlighter);
+    max-width: 300px;
+    padding: 0.7rem 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    position: absolute;
+    top: 60%;
+    left: 52%;
+    transform: rotate(-25deg);
+}
+.travel-container a{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: white;
+}
+.travel-container p{
+    font-size: 2rem;
+    font-weight: 800;
+    color: white;
+    margin: 0;
+}
+/* footer-style */
+footer{
+    background-color:rgba(19, 19, 24, 0.05);;
+    max-width: 100%;
+}
+.footer-container{
+    max-width: 70%;
+    margin: 1rem auto;
+    padding: 3rem;
+}
+.footer-brand-logo{
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.footer-brand-info{
+    max-width: 80%;
+    margin: 1rem auto;
+    text-align: center;
+}
+.footer-social-icon{
+    align-items: center;
+    justify-content:center;
+    gap: 2.5rem;
+    filter: grayscale(1);
+    font-size: 1.5rem;
+    margin: 2rem;
+}
+.footer-container p{
+    text-align: center;
+    margin: 2rem;
+}
+/* small device media query */
+@media screen and (max-width:576px) {
+    .nav{
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem 1rem;
+    }
+    .nav-bars{
+        display: block;
+    }
+    .nav-list a{
+        display: none;
+    }
+    .banner-container{
+        height: 100%;
+    }
+    .banner-form,
+    .popular-section,
+    .card-row1,
+    .perfect-section,
+    .Newsletter-section{
+    flex-direction: column;
+    }
+    .banner-form,
+    .banner-info,
+    .popular-left-container,
+    .popular-right-container,
+    .destination-info-container,
+    .card-section-info,
+    .perfect-left-container,
+    .Newsletter-left-container,
+    .Newsletter-left-info,
+    .Newsletter-right-container
+    {
+    max-width: 100%;
+    margin: 1rem;
+    }
+    .destination-image-row1,
+    .destination-image-row2,
+    .destination-image-row3{
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+    }
+    .tour-satorini-content,
+    .content2{
+        top: 10%;
+        left: 1%;
+    }
+    .tour-satorini-info-container,
+    .tour-satorini-btn-container{
+        padding: 0.5rem;
+    }
+    .perfect-right-container{
+        width: 100%;
+    }
+    .perfect-right-container h3{
+        top: 30%;
+    }
+    .perfect-left-container{
+        margin: 0;
+    }
+    .Newsletter-left-form{
+        align-items: stretch;
+    }
+    .travel-container{
+        transform: none;
+        position: static;
+        margin: 1rem auto;
+    }
+    .footer-container{
+        max-width: 100%;
+        padding: 1rem;
+    }
+    .footer-container p{
+        max-width: 100%;
+        padding: 0;
+    }
+}
+/* medium device media query */
+@media screen and (min-width:576px) and (max-width:992px){
+    .banner-container{
+        height: 100%;
+    }
+    .banner-form,
+    .perfect-section{
+    flex-direction: column;
+    }
+    .banner-form,
+    .banner-info,
+    .card-section-info,
+    .perfect-left-container{
+    max-width: 100%;
+    margin: 1rem;
+    }
+    .popular-section{
+    flex-direction: column;
+    }
+    .popular-left-container,
+    .popular-right-container{
+        max-width: 100%;
+    }
+    .destination-info-container{
+    max-width: 100%;
+    }
+    .destination-image-row1,
+    .destination-image-row3,
+    .destination-image-row2{
+        grid-template-columns: repeat(1,1fr);
+        justify-items: center;
+    }
+    .destination-image-row2{
+    margin-top: 1rem;
+    }
+    .tour-satorini-content,
+    .content2{
+    top: 14%;
+    left: 20%;
+    }
+    .perfect-right-container{
+        width: 100%;
+    }
+    .perfect-right-container img{
+        width: 100%;
+    }
+    .travel-container{
+        max-width: 50%;
+        left: 20%;
+        top: 20%;
+    }
+}
